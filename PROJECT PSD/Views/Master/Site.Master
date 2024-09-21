@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PROJECT_PSD.Views.Master.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/Views/Styles/SiteStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="~/Views/Styles/ProfileStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="~/Views/Styles/HomeStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="~/Views/Styles/GridStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="~/Views/Styles/InsertUpdateStyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+    <nav>
+        <ul>
+            <asp:Panel ID="customerNav" runat="server" Visible="false"> 
+                <li><a href="OrderSupplement.aspx">Order Supplement</a></li>
+                <li><a href="TransactionHistory.aspx">History</a></li>
+                <li><a href="Profile.aspx">Profile</a></li>
+                <li><asp:LinkButton ID="btnLogoutCustomer" runat="server" OnClick="Logout_Click">Logout</asp:LinkButton></li>
+
+            </asp:Panel>
+            <asp:Panel ID="adminNav" runat="server" Visible="false">
+                <li><a href="Home.aspx">Home</a></li>
+                <li><a href="ManageSupplement.aspx">Manage Supplement</a></li>
+                <li><a href="OrderQueue.aspx">Order Queue</a></li>
+                <li><a href="TransactionHistory.aspx">History</a></li>
+                <li><a href="Profile.aspx">Profile</a></li>
+                <li><a href="TransactionReport.aspx">TransactionReport</a></li>
+                <li><asp:LinkButton ID="btnLogoutAdmin" runat="server" OnClick="Logout_Click">Logout</asp:LinkButton>
+            </asp:Panel>    
+        </ul>
+    </nav>
+</div>
+<asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
