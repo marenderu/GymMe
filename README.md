@@ -5,6 +5,7 @@ GymMe is a marketplace for buying or selling gym essentials. you can place the p
 ## What i learned
 - Domain Driven Designs (Factory, Models, Controller, views, etc)
 - Database interactions (Create, Read, Update, Delete)
+- Connecting database with webforms
 - ASP.NET
 
 
